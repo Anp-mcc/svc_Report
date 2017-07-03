@@ -1,0 +1,9 @@
+d:\users\alexander\documents\visual studio 2017\Projects\WebApplication2\WebApplication2\bin\Debug\netcoreapp1.1\WebApplication2.deps.json
+d:\users\alexander\documents\visual studio 2017\Projects\WebApplication2\WebApplication2\bin\Debug\netcoreapp1.1\WebApplication2.runtimeconfig.json
+d:\users\alexander\documents\visual studio 2017\Projects\WebApplication2\WebApplication2\bin\Debug\netcoreapp1.1\WebApplication2.runtimeconfig.dev.json
+d:\users\alexander\documents\visual studio 2017\Projects\WebApplication2\WebApplication2\bin\Debug\netcoreapp1.1\WebApplication2.dll
+d:\users\alexander\documents\visual studio 2017\Projects\WebApplication2\WebApplication2\obj\Debug\netcoreapp1.1\WebApplication2.csprojResolveAssemblyReference.cache
+d:\users\alexander\documents\visual studio 2017\Projects\WebApplication2\WebApplication2\obj\Debug\netcoreapp1.1\WebApplication2.AssemblyInfo.cs
+d:\users\alexander\documents\visual studio 2017\Projects\WebApplication2\WebApplication2\bin\Debug\netcoreapp1.1\WebApplication2.pdb
+d:\users\alexander\documents\visual studio 2017\Projects\WebApplication2\WebApplication2\obj\Debug\netcoreapp1.1\WebApplication2.dll
+d:\users\alexander\documents\visual studio 2017\Projects\WebApplication2\WebApplication2\obj\Debug\netcoreapp1.1\WebApplication2.pdb
