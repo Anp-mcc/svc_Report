@@ -15,7 +15,7 @@ namespace test2.Modules
     public class ReportMaker
     {
         public string TFName { get; set; }
-        public Bitmap DrawPie(Report rp)
+       /* public Bitmap DrawPie(Report rp)
         {
             var plPie = new PlotModel { Title = "Pie Chart" };
             var pie = new PieSeries() { AngleSpan = 360, StartAngle = 0, StrokeThickness = 5.0, InsideLabelPosition = 0.65, FontSize = 22 };
@@ -43,7 +43,7 @@ namespace test2.Modules
             PngExporter png = new PngExporter();
             Bitmap barBmp = png.ExportToBitmap(plBar);
             return barBmp;
-        }
+        }*/
 
         public async void DownloadPageAsync(Report rp, string path)
         {
@@ -63,30 +63,32 @@ namespace test2.Modules
         public void CreateReport(Report rp, string path)
         {
             DownloadPageAsync(rp, path);
-
+           
+            
+            
             var doc = new Document(iTextSharp.text.PageSize.A4);
 
-            var pieImg = iTextSharp.text.Image.GetInstance(DrawPie(rp), BaseColor.White);
+            /*var pieImg = iTextSharp.text.Image.GetInstance(DrawPie(rp), BaseColor.White);
             var barImg = iTextSharp.text.Image.GetInstance(DrawBar(rp), BaseColor.White);
             pieImg.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
             barImg.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
             barImg.ScalePercent(75);
-            pieImg.ScalePercent(75);
+            pieImg.ScalePercent(75);*/
 
-            System.Drawing.Image img = System.Drawing.Image.FromFile(path + @"\Temp\" + TFName);
+            /*System.Drawing.Image img = System.Drawing.Image.FromFile(path + @"\Temp\" + TFName);
             var repImg = iTextSharp.text.Image.GetInstance(img, BaseColor.White);
             repImg.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
-            repImg.ScalePercent(75);
+            repImg.ScalePercent(75);*/
 
             var fs = new FileStream(path + @"\Temp\" + rp.Id.ToString() + ".pdf", FileMode.Create);
             var writer = PdfWriter.GetInstance(doc, fs);
             doc.Open();
 
             doc.Add(new Paragraph(rp.Name));
-            doc.Add(repImg);
+           // doc.Add(repImg);
             doc.AddTitle(rp.Name);
-            doc.Add(pieImg);
-            doc.Add(barImg);
+            /*doc.Add(pieImg);
+            doc.Add(barImg);*/
             doc.Add(new Paragraph(rp.Text));
 
             doc.Close();

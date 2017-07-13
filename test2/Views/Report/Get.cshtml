@@ -1,0 +1,12 @@
+﻿@model IEnumerable<test2.Models.Report>
+@{
+    ViewBag.Title = "Reports in DB";
+}
+
+<table class="table">
+    <tr><td>Id</td><td>Name</td><td>Text</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Id</td><td>@item.Name</td><td>@item.Text</td></tr>
+    }
+</table>

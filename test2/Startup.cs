@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 
 namespace test2
 {
@@ -20,6 +21,10 @@ namespace test2
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+            using (var client = new test2.Models.ReportContext())
+            {
+                client.Database.EnsureCreated();
+            }
         }
 
         public IConfigurationRoot Configuration { get; }
@@ -29,6 +34,7 @@ namespace test2
         {
             // Add framework services.
             services.AddMvc();
+            services.AddEntityFrameworkSqlite().AddDbContext<test2.Models.ReportContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

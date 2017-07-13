@@ -6,23 +6,29 @@ using Microsoft.AspNetCore.Mvc;
 using test2.Models;
 using test2.Modules;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 
 namespace test2.Controllers
 {
 	[Route("api/Report")]
 	public class ReportController : Controller
 	{
+        ReportContext db = new ReportContext();
+
 		IHostingEnvironment _env;
 		public ReportController(IHostingEnvironment env)
 		{
 			_env = env;
 		}
-		// GET: api/Report
-		[HttpGet]
+
+
+        // GET: api/Report
+        [HttpGet]
 		public IActionResult Get()
 		{
-			/**/
-			return Ok("ok");
+ 
+            return View(db.Reports.ToList());
+
 		}
 
 		// GET: api/Report/5
@@ -30,10 +36,14 @@ namespace test2.Controllers
 		public FileResult Get(int id)
 		{
             string path = _env.ContentRootPath;
-            byte[] doc = System.IO.File.ReadAllBytes(path + @"\Temp\" + id.ToString() + ".pdf");
-            string file_type = "application/pdf";
-            string file_name = "Report.pdf";
-            return File(doc, file_type, file_name);
+            try { byte[] doc = System.IO.File.ReadAllBytes(path + @"\Temp\" + id.ToString() + ".pdf");
+                string file_type = "application/pdf";
+                string file_name = "Report.pdf";
+                return File(doc, file_type, file_name);
+            }
+            catch (Exception exp) { };
+            return null;
+
 		}
 
 		// POST: api/Report
@@ -42,12 +52,14 @@ namespace test2.Controllers
 		{
 			string path = _env.ContentRootPath;
             ReportMaker rm = new ReportMaker();
+            db.Reports.Add(rp);
+            db.SaveChanges();
             Task.Run(() => rm.CreateReport(rp, path));
             return Ok("Ваш отчет будет доступен по адресу api/report/" + rp.Id.ToString() + " в ближайшее время");
 		}
 
-		// POST: api/Report/5
-		[HttpPost("{id}")]
+        // POST: api/Report/5
+        /*[HttpPost("{id}")]
 		public IActionResult Post(int id, [FromBody] Report rp)
 		{
 			if (rp == null)
@@ -68,6 +80,6 @@ namespace test2.Controllers
 				{ "bar2", 1 }
 			};
 			return Ok(rp.PieChartData["pie1"]);
-		}
-	}
+		}*/
+    }
 }

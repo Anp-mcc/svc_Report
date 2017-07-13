@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 
 namespace test2.Models
 {
-    public class Report
+    public class Report 
     {
 		public int Id { get; set; }
+        public string Template { get; set; }
 		public string Name { get; set; }
 		public string Text { get; set; }
-		public Dictionary<string, double> PieChartData { get; set; }
-		public Dictionary<string, double> BarChartData { get; set; }
+		//public Dictionary<string, double> PieChartData { get; set; }
+		//public Dictionary<string, double> BarChartData { get; set; }
 		public string ImagePath { get; set; }
 	}
 }
