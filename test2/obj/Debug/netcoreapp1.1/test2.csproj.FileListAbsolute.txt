@@ -1,0 +1,9 @@
+C:\Users\dev\documents\visual studio 2017\Projects\test2\test2\bin\Debug\netcoreapp1.1\test2.deps.json
+C:\Users\dev\documents\visual studio 2017\Projects\test2\test2\bin\Debug\netcoreapp1.1\test2.runtimeconfig.json
+C:\Users\dev\documents\visual studio 2017\Projects\test2\test2\bin\Debug\netcoreapp1.1\test2.runtimeconfig.dev.json
+C:\Users\dev\documents\visual studio 2017\Projects\test2\test2\bin\Debug\netcoreapp1.1\test2.dll
+C:\Users\dev\documents\visual studio 2017\Projects\test2\test2\bin\Debug\netcoreapp1.1\test2.pdb
+C:\Users\dev\documents\visual studio 2017\Projects\test2\test2\obj\Debug\netcoreapp1.1\test2.csprojResolveAssemblyReference.cache
+C:\Users\dev\documents\visual studio 2017\Projects\test2\test2\obj\Debug\netcoreapp1.1\test2.AssemblyInfo.cs
+C:\Users\dev\documents\visual studio 2017\Projects\test2\test2\obj\Debug\netcoreapp1.1\test2.dll
+C:\Users\dev\documents\visual studio 2017\Projects\test2\test2\obj\Debug\netcoreapp1.1\test2.pdb
