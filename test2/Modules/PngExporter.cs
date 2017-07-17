@@ -1,8 +1,14 @@
-﻿using OxyPlot;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="PngExporter.cs" company="OxyPlot">
+//   Copyright (c) 2014 OxyPlot contributors
+// </copyright>
+// <summary>
+//   Provides functionality to export plots to png.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+using OxyPlot;
 using System.Drawing;
 using System.IO;
-
-
 namespace test2.Modules
 {
     public class PngExporter : IExporter

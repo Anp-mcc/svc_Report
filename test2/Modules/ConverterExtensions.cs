@@ -1,9 +1,15 @@
-﻿using OxyPlot;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="ConverterExtensions.cs" company="OxyPlot">
+//   Copyright (c) 2014 OxyPlot contributors
+// </copyright>
+// <summary>
+//   Extension method used to convert to/from Windows/Windows.Media classes.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+using OxyPlot;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace test2.Modules
 {

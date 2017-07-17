@@ -1,4 +1,13 @@
-﻿using OxyPlot;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="ExporterExtensions.cs" company="OxyPlot">
+//   Copyright (c) 2014 OxyPlot contributors
+// </copyright>
+// <summary>
+//   Provides extension methods for exporters.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+using OxyPlot;
 using System.IO;
 
 namespace test2.Modules
